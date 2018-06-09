@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98c2aa8e34117d94593731a0432615a7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cam: {instanceID: 0}
+  - Plant: {fileID: 1780118100481236, guid: 657303d52b22e5f4f9655cb13f198052, type: 2}
+  - Terrain: {fileID: 1617638192848406, guid: 39f06932833eed147af3aee2bbc48e3c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
