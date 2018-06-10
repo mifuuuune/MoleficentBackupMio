@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoleficentBackupMio", "Assembly-CSharp.csproj", "{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoleficentBackupMio", "NavMeshComponents.csproj", "{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoleficentBackupMio", "NavMeshComponentsEditor.csproj", "{634AB514-91B2-AC5B-1282-76A480F3C69D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634AB514-91B2-AC5B-1282-76A480F3C69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634AB514-91B2-AC5B-1282-76A480F3C69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634AB514-91B2-AC5B-1282-76A480F3C69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634AB514-91B2-AC5B-1282-76A480F3C69D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

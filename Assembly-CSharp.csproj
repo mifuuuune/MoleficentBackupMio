@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{FED735E1-D9D3-09B0-DB6F-2C6DAD4ADDFA}</ProjectGuid>
+    <ProjectGuid>{4684A7B7-E753-10E0-8FEA-50E8670B8B9C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -91,6 +91,7 @@
     <Compile Include="Assets\Logronio Gabriel AI Project\PlayerController.cs" />
     <Compile Include="Assets\MainMenuLobby.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\ChangeSceneManager.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\DoorBehaviour.cs" />
     <Compile Include="Assets\Scripts\KeyBehaviour.cs" />
@@ -112,10 +113,10 @@
     <Compile Include="Assets\Scripts\players controllers\SirSageController.cs" />
     <Compile Include="Assets\Scripts\players controllers\Stay_Idle.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/mling/Desktop/Nuova cartella/OGD/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/mling/Desktop/MoleficentBackupMio/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/mling/Desktop/Nuova cartella/OGD/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/mling/Desktop/MoleficentBackupMio/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -351,11 +352,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{3207DAD6-E730-815B-3962-31002E96F5E0}</Project>
+      <Project>{634AB514-91B2-AC5B-1282-76A480F3C69D}</Project>
       <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{4A80210A-C92F-FDBF-F878-0A6D057DCD0C}</Project>
+      <Project>{D3C6101E-AFA2-B73E-C559-6F8CC8F2AD49}</Project>
       <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>

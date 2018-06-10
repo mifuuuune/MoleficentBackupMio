@@ -2,54 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class LambSpawner : MonoBehaviour {
 
     public int maxNumber;
     public float spawnTime;
     public Transform prefab;
+    public Transform prefabWithSpring;
+    public float percentage;
     private float timeFromLastSpawned = 0;
     private List<Vector3> finalPoints = new List<Vector3>();
     private List<Vector3> targetPoints = new List<Vector3>();
+    private int currentNumberOfLambs = 0;
 
 	// Use this for initialization
 	void Start () {
-        finalPoints.Add(new Vector3(0,0,-15.70f));
-        finalPoints.Add(new Vector3(0,0,15.70f));
-        finalPoints.Add(new Vector3(15.70f,0,0));
-        finalPoints.Add(new Vector3(-15.70f,0,0));
+        finalPoints.Add(new Vector3(0,0,-16.0f));
+        finalPoints.Add(new Vector3(0,0,16.0f));
+        finalPoints.Add(new Vector3(16.0f,0,0));
+        finalPoints.Add(new Vector3(-16.0f,0,0));
+        finalPoints.Add(new Vector3(-11.0f,0,-11.0f));
+        finalPoints.Add(new Vector3(-11.0f,0,11.0f));
+        finalPoints.Add(new Vector3(11.0f,0,-11.0f));
+        finalPoints.Add(new Vector3(11.0f,0,11.0f));
 
         targetPoints.Add(new Vector3(0, 0, -14.70f));
         targetPoints.Add(new Vector3(0, 0, 14.70f));
         targetPoints.Add(new Vector3(14.70f, 0, 0));
         targetPoints.Add(new Vector3(-14.70f, 0, 0));
+        targetPoints.Add(new Vector3(-10.3f, 0, -10.3f));
+        targetPoints.Add(new Vector3(-10.3f, 0, 10.3f));
+        targetPoints.Add(new Vector3(10.3f, 0, -10.3f));
+        targetPoints.Add(new Vector3(10.3f, 0, 10.3f));
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (getLambSpawnedNumber() < maxNumber && timeFromLastSpawned >= spawnTime)
+		if (currentNumberOfLambs < maxNumber && timeFromLastSpawned >= spawnTime)
         {
             Random rnd = new Random();
-            int start = Random.Range(0,finalPoints.Count-1);
+            int start = Random.Range(0, finalPoints.Count);
             int end;
             do
             {
-                end = Random.Range(0, finalPoints.Count - 1);
+                end = Random.Range(0, finalPoints.Count);
             }
             while (end == start);
-            Transform lamb = Instantiate(prefab, finalPoints[start], Quaternion.identity);
+            Debug.Log("start: " + finalPoints[start]);
+            Debug.Log("end: " + finalPoints[end]);
+            Transform lamb = null;
+            if (Random.Range(0,100) < percentage) lamb = Instantiate(prefabWithSpring, finalPoints[start], Quaternion.LookRotation(finalPoints[end]));
+            else lamb = Instantiate(prefab, finalPoints[start], Quaternion.LookRotation(finalPoints[end]));
             Pathfinding pf = lamb.GetComponent<Pathfinding>();
+            pf.startingPoint = targetPoints[start];
             pf.finalPoint = finalPoints[end];
             pf.target = targetPoints[end];
-            //USARE SOLO UN PUNTO E MODIFICARE LA GRIGLIA (?)
+            currentNumberOfLambs++;
+            timeFromLastSpawned = 0;
         }
-	}
+        else timeFromLastSpawned += Time.deltaTime;
+    }
 
-    private int getLambSpawnedNumber()
+    public void lambArrived(Transform t)
     {
-        int n = 0;
-        foreach (GameObject go in GameObject.FindObjectsOfType<GameObject>())
-            if (go.layer == 14)
-                n++;
-        return n;
+        int start = Random.Range(0, finalPoints.Count);
+        int end;
+        do
+        {
+            end = Random.Range(0, finalPoints.Count);
+        }
+        while (end == start);
+
+        t.position = finalPoints[start];
+        Pathfinding pf = t.GetComponent<Pathfinding>();
+        pf.startingPoint = targetPoints[start];
+        pf.finalPoint = finalPoints[end];
+        pf.target = targetPoints[end];
     }
 }

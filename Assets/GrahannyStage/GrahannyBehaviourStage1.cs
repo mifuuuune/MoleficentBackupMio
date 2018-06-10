@@ -70,6 +70,7 @@ public class GrahannyBehaviourStage1 : MonoBehaviour {
     private void UpdateCounter()
     {
         if (counting) counter += Time.deltaTime;
+        Debug.Log(counter);
     }
 
     private void Hit()
@@ -89,7 +90,7 @@ public class GrahannyBehaviourStage1 : MonoBehaviour {
 
     private void ToSecondStage()
     {
-        //passa alla seconda fase
+        GetComponent<ChangeSceneManager>().changeScene("GrahannyStage2");
     }
 
     private int NumPlayersInRange()
@@ -117,6 +118,7 @@ public class GrahannyBehaviourStage1 : MonoBehaviour {
 
     private bool EnoughPlayersInRange()
     {
+        Debug.Log(NumPlayersInRange());
         return NumPlayersInRange() >= 3;
     }
 

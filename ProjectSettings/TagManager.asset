@@ -16,6 +16,8 @@ TagManager:
   - Sage
   - Loin
   - Eal
+  - LambSpawner
+  - LambWithSpring
   layers:
   - Default
   - TransparentFX
@@ -32,7 +34,7 @@ TagManager:
   - Hen
   - Chick
   - Lamb
-  - 
+  - Unwalkable
   - 
   - 
   - 
