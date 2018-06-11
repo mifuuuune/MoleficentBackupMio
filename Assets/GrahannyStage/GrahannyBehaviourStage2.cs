@@ -90,7 +90,7 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
         while (true)
         {
             dt.walk();
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 
@@ -148,6 +148,7 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
 
     public object LoadRoundAttack(object o)
     {
+        StopFollowing();
         anim.SetTrigger("RoundAttack");
         Invoke("RoundAttack", 1f);
         return null;
@@ -155,6 +156,7 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
 
     public object LoadFrontAttack(object o)
     {
+        StopFollowing();
         anim.SetTrigger("FrontAttack");
         Invoke("FrontAttack", 1f);
         return null;
@@ -243,6 +245,12 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
         anim.SetBool("Running", true);
         pf.setFollowing(true);
         pf.ChangeTarget(player);
+    }
+
+    private void StopFollowing()
+    {
+        anim.SetBool("Running", false);
+        pf.setFollowing(false);
     }
 
 }

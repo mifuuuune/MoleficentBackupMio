@@ -17,7 +17,7 @@ public class PlayerFollower : MonoBehaviour {
 	void Update () {
         if (following)
         {
-            transform.LookAt(player.transform.position);
+            transform.LookAt(new Vector3(player.transform.position.x, 0, player.transform.position.z));
             transform.position += (player.transform.position - transform.position).normalized * speed * Time.deltaTime;
         }
     }
