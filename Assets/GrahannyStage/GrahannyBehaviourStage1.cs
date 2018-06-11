@@ -79,6 +79,11 @@ public class GrahannyBehaviourStage1 : MonoBehaviour {
         anim.SetTrigger("RoundAttack");
 
         //respingi
+        Invoke("PushAway", .5f);
+    }
+
+    private void PushAway()
+    {
         foreach (string t in playerTags)
         {
             GameObject go = GameObject.FindGameObjectWithTag(t);

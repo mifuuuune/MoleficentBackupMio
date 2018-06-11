@@ -60,12 +60,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GrahannyStage\AstarMovement.cs" />
+    <Compile Include="Assets\GrahannyStage\BoardBehaviour.cs" />
+    <Compile Include="Assets\GrahannyStage\DecisionTree.cs" />
     <Compile Include="Assets\GrahannyStage\FSM.cs" />
     <Compile Include="Assets\GrahannyStage\GrahannyBehaviourStage1.cs" />
+    <Compile Include="Assets\GrahannyStage\GrahannyBehaviourStage2.cs" />
     <Compile Include="Assets\GrahannyStage\Grid.cs" />
     <Compile Include="Assets\GrahannyStage\LambSpawner.cs" />
     <Compile Include="Assets\GrahannyStage\Node.cs" />
     <Compile Include="Assets\GrahannyStage\Pathfinding.cs" />
+    <Compile Include="Assets\GrahannyStage\PlayerFollower.cs" />
+    <Compile Include="Assets\GrahannyStage\Stage2BoulderBehaviour.cs" />
     <Compile Include="Assets\KnifeBehaviour.cs" />
     <Compile Include="Assets\LobbyPlayer.cs" />
     <Compile Include="Assets\Logronio Gabriel AI Project\Behaviours\AlarmBehaviour.cs" />

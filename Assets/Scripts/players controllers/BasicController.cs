@@ -361,4 +361,9 @@ public class BasicController : NetworkBehaviour
     {
         lives--;
     }
+
+    public bool checkIsMole()
+    {
+        return isMole;
+    }
 }

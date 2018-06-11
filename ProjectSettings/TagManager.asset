@@ -18,6 +18,8 @@ TagManager:
   - Eal
   - LambSpawner
   - LambWithSpring
+  - Board
+  - Grahanny
   layers:
   - Default
   - TransparentFX
