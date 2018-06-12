@@ -84,6 +84,7 @@ public class GrahannyBehaviourStage1 : MonoBehaviour {
 
     private void PushAway()
     {
+        transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         foreach (string t in playerTags)
         {
             GameObject go = GameObject.FindGameObjectWithTag(t);

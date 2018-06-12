@@ -61,10 +61,12 @@
   <ItemGroup>
     <Compile Include="Assets\GrahannyStage\AstarMovement.cs" />
     <Compile Include="Assets\GrahannyStage\BoardBehaviour.cs" />
+    <Compile Include="Assets\GrahannyStage\ChangeSceneManager.cs" />
     <Compile Include="Assets\GrahannyStage\DecisionTree.cs" />
     <Compile Include="Assets\GrahannyStage\FSM.cs" />
     <Compile Include="Assets\GrahannyStage\GrahannyBehaviourStage1.cs" />
     <Compile Include="Assets\GrahannyStage\GrahannyBehaviourStage2.cs" />
+    <Compile Include="Assets\GrahannyStage\GrahannyRespawnerBehaviour.cs" />
     <Compile Include="Assets\GrahannyStage\Grid.cs" />
     <Compile Include="Assets\GrahannyStage\LambSpawner.cs" />
     <Compile Include="Assets\GrahannyStage\Node.cs" />
@@ -96,7 +98,6 @@
     <Compile Include="Assets\Logronio Gabriel AI Project\PlayerController.cs" />
     <Compile Include="Assets\MainMenuLobby.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\ChangeSceneManager.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\DoorBehaviour.cs" />
     <Compile Include="Assets\Scripts\KeyBehaviour.cs" />

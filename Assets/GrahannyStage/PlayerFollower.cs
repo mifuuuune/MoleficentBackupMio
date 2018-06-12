@@ -18,7 +18,8 @@ public class PlayerFollower : MonoBehaviour {
         if (following)
         {
             transform.LookAt(new Vector3(player.transform.position.x, 0, player.transform.position.z));
-            transform.position += (player.transform.position - transform.position).normalized * speed * Time.deltaTime;
+            if ((player.transform.position - transform.position).magnitude >= 1)
+                transform.position += (player.transform.position - transform.position).normalized * speed * Time.deltaTime;
         }
     }
 

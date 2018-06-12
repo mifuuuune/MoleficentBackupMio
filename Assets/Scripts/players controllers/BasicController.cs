@@ -360,6 +360,7 @@ public class BasicController : NetworkBehaviour
     public void DecreaseLives()
     {
         lives--;
+        //controllo se uno finisce le vite
     }
 
     public bool checkIsMole()

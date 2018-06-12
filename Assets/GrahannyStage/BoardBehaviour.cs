@@ -15,7 +15,7 @@ public class BoardBehaviour : MonoBehaviour {
     // Use this for initialization
     void Start () {
         otherB = otherBoard.GetComponent<BoardBehaviour>();
-        settings = GetComponent<ParticleSystem>().main;
+        settings = transform.GetChild(0).GetComponent<ParticleSystem>().main;
     }
 	
 	// Update is called once per frame

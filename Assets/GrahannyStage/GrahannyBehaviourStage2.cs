@@ -90,7 +90,7 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
         while (true)
         {
             dt.walk();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.2f);
         }
     }
 
@@ -150,15 +150,23 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
     {
         StopFollowing();
         anim.SetTrigger("RoundAttack");
-        Invoke("RoundAttack", 1f);
+        Invoke("RoundAttack", .5f);
         return null;
     }
 
     public object LoadFrontAttack(object o)
     {
         StopFollowing();
-        anim.SetTrigger("FrontAttack");
-        Invoke("FrontAttack", 1f);
+        if (Random.Range(0, 5) <= 1)
+        {
+            anim.SetTrigger("RoundAttack");
+            Invoke("RoundAttack", .5f);
+        }
+        else
+        {
+            anim.SetTrigger("FrontAttack");
+            Invoke("FrontAttack", .5f);
+        }
         return null;
     }
 
@@ -219,12 +227,36 @@ public class GrahannyBehaviourStage2 : MonoBehaviour {
 
     private void RoundAttack()
     {
+        transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         //fa perdere una vita ai giocatori in range B e li fa respawnare
+        foreach (GameObject go in FindObjectsOfType<GameObject>())
+        {
+            if (playerTags.Contains(go.tag))
+            {
+                if ((transform.position - go.transform.position).magnitude <= distanceB)
+                {
+                    BasicController playerController = go.GetComponent<BasicController>();
+                    playerController.DecreaseLives();
+                    playerController.Respawn(Vector3.zero);
+                }
+            }
+        }
     }
 
     private void FrontAttack()
     {
+        transform.GetChild(1).GetComponent<ParticleSystem>().Play();
         //fa perdere una vita al giocatore in range B davanti a sè e lo fa respawnare
+        RaycastHit hit;
+        if(Physics.SphereCast(transform.position + new Vector3(0,1,0), .5f, transform.forward, out hit, distanceB))
+        {
+            if (playerTags.Contains(hit.transform.tag))
+            {
+                BasicController playerController = hit.transform.gameObject.GetComponent<BasicController>();
+                playerController.DecreaseLives();
+                playerController.Respawn(Vector3.zero);
+            }
+        }
     }
 
     private void FollowPlayerWithLessLivesInRange(float range)

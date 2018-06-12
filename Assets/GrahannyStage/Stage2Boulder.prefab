@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4388487117477356}
   - component: {fileID: 65789660214767166}
+  - component: {fileID: 114888777974888428}
   m_Layer: 0
   m_Name: Stage2Boulder
   m_TagString: Untagged
@@ -125,3 +126,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.79, y: 2, z: 0.76}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &114888777974888428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078146061245640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f966f99d3484347b45158608195919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
